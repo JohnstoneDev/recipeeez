@@ -5,14 +5,15 @@ module.exports = {
   ],  theme: {
     fontFamily : {
       global : ['Inter', 'sans-serif'],
+      heading : ['Young Serif', 'sans-serif'],
     },
     fontSize : {
       'heading' : ['36px', {
-          lineHeight : '40px',
-          letterSpacing : '0px',
-          fontWeight : '800',
-        }
-      ],
+        lineHeight : '40px',
+        letterSpacing : '0px',
+        fontWeight : '400',
+      }
+    ],
     'section' : ['24px', {
         lineHeight : '32px',
         letterSpacing : '0px',
@@ -31,6 +32,12 @@ module.exports = {
         fontWeight : '400',
       }
     ],
+    'small' : ['16px', {
+        lineHeight : '28px',
+        letterSpacing : '0px',
+        fontWeight : '400',
+      }
+    ]
   },
     screens: {
       'mobile' : '375px',
