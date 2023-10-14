@@ -1,0 +1,22 @@
+@tailwind components;
+
+@layer components {
+  .recipe-card h3 {
+    @apply pb-3 text-section
+  }
+
+  .recipes-list {
+    @apply grid grid-cols-2 laptop:grid-cols-3 gap-6
+  }
+
+  .recipe {
+    @apply flex flex-col min-h-[300px] rounded bg-slate-50 shadow-xl justify-between
+  }
+
+  .recipe section {
+    @apply flex flex-col gap-2 justify-evenly w-full p-3 space-y-2 drop-shadow-lg
+  }
+  .recipe img {
+    @apply rounded object-cover
+  }
+}

@@ -1,0 +1,36 @@
+@tailwind components;
+
+@layer components {
+ .main {
+  @apply p-2 font-medium space-y-3
+ }
+
+ .top {
+  @apply font-heading text-heading flex gap-2 justify-between items-center
+ }
+
+ .label {
+  @apply flex items-center gap-2
+ }
+
+ .search-bar {
+  @apply space-y-2
+ }
+
+ .label > span {
+  @apply text-button font-heading
+ }
+
+ .input {
+  @apply p-1.5 w-full border-2 border-blue-500 rounded-md font-bold bg-gradient-to-r from-slate-50 to-slate-200 placeholder:text-small placeholder:text-zinc-500 placeholder:font-semibold
+ }
+
+  button {
+  @apply bg-gradient-to-bl from-blue-400 to-blue-600 p-1.5 rounded-md text-white font-extrabold border-2 border-blue-500
+ }
+
+ .loading {
+  @apply text-center text-heading font-heading p-20 animate-pulse transition-all duration-100 font-extrabold
+ }
+
+}

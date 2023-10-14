@@ -1,14 +1,41 @@
 // lib imports
-import { motion } from 'framer-motion'
+
+// Assets
+import '../../Styles/home.css'
 
 // local imports
 import { Container } from './Container'
+import { SearchBar } from './SearchBar'
+import { RecipesList } from './Recipes'
+
+import { recipes } from './Data'
+
+// Actions
+// import { GetRecipes } from '../../Actions/CallAPI'
 
 export const HomeComponent = () => {
+	// const  recipes = GetRecipes().stateData.results
+	// const loading = GetRecipes().loading
+
 	return (
 		<Container>
-			<motion.h1 className='font-heading text-heading text-center'>This is the way</motion.h1>
-			<p className='text-center'>May the force be with you!</p>
+			<div className='main'>
+				<div className='top'>
+					<h4>Recipeez</h4>
+					<ion-icon name="bonfire-outline"></ion-icon>
+				</div>
+				<SearchBar />
+				<RecipesList recipes={recipes} loading={false} />
+			</div>
 		</Container>
+	)
+}
+
+
+export const Loading = () => {
+	return (
+		<section className='loading'>
+			<p> Loading ... </p>
+		</section>
 	)
 }
