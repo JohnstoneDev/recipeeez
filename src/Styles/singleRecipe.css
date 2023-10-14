@@ -1,0 +1,39 @@
+@tailwind components;
+
+@layer components {
+  h1 {
+    @apply text-heading font-heading
+  }
+
+  img {
+    @apply rounded-lg object-center object-cover h-full
+  }
+
+  h2, h3, h4, h5  {
+    @apply text-button font-heading
+  }
+
+  .recipe-intro {
+    @apply flex flex-col tablet:grid tablet:grid-cols-2 gap-4 items-start h-full w-full justify-between border-b-4
+  }
+
+  .recipe-intro div > article {
+    @apply flex flex-col gap-3 items-start
+  }
+
+  .wines article {
+    @apply space-y-3 text-black drop-shadow
+  }
+
+  .recipe-card, .recipe-card section, .ingredients, .wines {
+    @apply p-2 space-y-3 gap-3
+  }
+
+  .ingredients-list {
+    @apply grid grid-cols-2 tablet:grid-cols-3 gap-4
+  }
+
+  .ingredient-card {
+    @apply p-2.5 bg-cyan-100 rounded-lg shadow-xl space-y-3
+  }
+}
