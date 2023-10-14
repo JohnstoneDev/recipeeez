@@ -14,9 +14,9 @@ function Recipe({ id, title, image,  }){
       <img src={image} alt={title}/>
       <section>
         <h4>{title}</h4>
-        <button>
-          <Link to={`/recipes/${id}`}> Learn  More </Link>
-        </button>
+        <Link to={`/recipes/${id}`} className='button'>
+          Details
+        </Link>
       </section>
     </div>
   )
@@ -31,7 +31,6 @@ export const RecipesList = ({ recipes, loading  }) => {
           <Loading /> :
           <div>
             <section className="recipe-card">
-              <h3> Recipes : </h3>
               <section className="recipes-list">
                   {
                     recipes.map((recipe) => <Recipe key={recipe.id} {...recipe} />)

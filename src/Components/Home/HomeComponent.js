@@ -1,4 +1,5 @@
 // lib imports
+import { useEffect } from 'react'
 
 // Assets
 import '../../Styles/home.css'
@@ -8,14 +9,18 @@ import { Container } from './Container'
 import { SearchBar } from './SearchBar'
 import { RecipesList } from './Recipes'
 
-import { recipes } from './Data'
+// import { recipes } from './Data'
 
 // Actions
-// import { GetRecipes } from '../../Actions/CallAPI'
+import { GetRecipes } from '../../Actions/CallAPI'
 
 export const HomeComponent = () => {
-	// const  recipes = GetRecipes().stateData.results
-	// const loading = GetRecipes().loading
+	const  recipes = GetRecipes().stateData.results
+	const loading = GetRecipes().loading
+
+	useEffect(() => {
+
+	},[recipes])
 
 	return (
 		<Container>
@@ -25,7 +30,7 @@ export const HomeComponent = () => {
 					<ion-icon name="bonfire-outline"></ion-icon>
 				</div>
 				<SearchBar />
-				<RecipesList recipes={recipes} loading={false} />
+				<RecipesList recipes={recipes} loading={loading} />
 			</div>
 		</Container>
 	)
